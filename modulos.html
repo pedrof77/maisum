@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos de Aprendizagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-content">
+            <h1>Módulos de Aprendizagem</h1>
+            <nav>
+                <a href="proj.html">Início</a>
+                <a href="modulos.html">Módulos</a>
+                <a href="funcionalidades.html">Funcionalidades</a>
+                <a href="eventos.html">Eventos</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section id="modulos" class="section-bg">
+        <h2>Explore Nossos Módulos</h2>
+        <div class="modulos-grid">
+            <div class="modulo-card">
+                <h3>Gestão Financeira</h3>
+                <p>Ensina a administrar o orçamento e organizar campanhas de arrecadação.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+            <div class="modulo-card">
+                <h3>Gestão de Pessoas</h3>
+                <p>Capacita para gerenciar equipes e organizar atividades.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+            <div class="modulo-card">
+                <h3>Gestão em dividas e creditos</h3>
+                <p>Oferece ferramentas e estratégias para divulgação online.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+            <div class="modulo-card">
+                <h3>Capacitação em Finanças</h3>
+                <p>Ensina a lidar com o orçamento e despesas.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+            <div class="modulo-card">
+                <h3>Planejamento de Orçamento</h3>
+                <p>Aborda estratégias para atrair e manter jovens na igreja.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+            <div class="modulo-card">
+                <h3>Planejamento de Eventos</h3>
+                <p>Ensina a organizar e executar eventos eficazes.</p>
+                <a href="#" class="btn">Acessar Módulo</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>© 2024 - Gestão para Organizações Religiosas. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- script para janela de alert -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const cards = document.querySelectorAll(".modulo-card");
+
+            
+            cards.forEach(card => {
+                card.addEventListener("click", () => {
+                    
+                    const titulo = card.querySelector("h3").textContent;
+
+                    
+                    const confirmacao = confirm(`Você selecionou o módulo: "${titulo}". Deseja continuar?`);
+
+                    
+                    if (confirmacao) {
+                        alert("Você confirmou sua escolha! Redirecionando...");
+                        
+                    } else {
+                        alert("Você cancelou a ação.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
